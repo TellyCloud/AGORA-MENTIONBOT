@@ -1,6 +1,6 @@
 # A Powerful Music And Management Bot
 # Property Of Rocks Indian Largest Chatting Group
-# Rocks © @Dr_Asad_Ali © Rocks
+# Rocks ©© Rocks
 # Owner Mr_Agora & @KannadigaXD
 
 
