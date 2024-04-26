@@ -1,7 +1,7 @@
 # A Powerful Music And Management Bot
 # Property Of Rocks Indian Largest Chatting Group
-# Rocks ©© Rocks
-# Owner Mr_Agora & @KannadigaXD
+# Rocks © @Dr_Asad_Ali © Rocks
+# Owner Asad Ali + Kattai Massom + Abhimanyu Singh
 
 
 import os, logging, asyncio
@@ -27,6 +27,68 @@ bot_token = os.environ.get("TOKEN", "")
 client = TelegramClient("client", api_id, api_hash).start(bot_token=bot_token)
 spam_chats = []
 
+
+@client.on(events.NewMessage(pattern="^/start$"))
+async def start(event):
+    chat_id = event.chat_id
+    if not event.is_private:
+        return await event.respond("ɪ ᴀᴍ ᴀʟɪᴠᴇ 🥺")
+    await event.reply(
+        "━━━━━━━━━━━━━━━━━━━━━━━━\n\n✪ ɪ ᴀᴍ ᴀʟᴇxᴀ ᴛᴏ ᴍᴇɴᴛɪᴏɴ ᴀʟʟ ᴛʜᴇ ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀs ɪɴ ᴛᴇʟᴇɢʀᴀᴍ\n✪ ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ʀᴜɴ /help..\n\n┏━━━━━━━━━━━━━━━━━┓\n┣★ ᴏᴡɴᴇʀ    : [ᴀsᴀᴅ ᴀʟɪ](https://t.me/Dr_Asad_Ali)\n┣★ ᴜᴘᴅᴀᴛᴇs › : [ᴀʟᴇxᴀ ʜᴇʟᴘ](https://t.me/Alexa_BotUpdates)┓\n┣★ ʀᴇᴘᴏ › : [ᴀʟᴇxᴀ ʀᴇᴘᴏ](https://github.com/TheTeamAlexa/MentionBot)\n┗━━━━━━━━━━━━━━━━━┛\n\n💞 ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ǫᴜᴇsᴛɪᴏɴs ᴛʜᴇɴ\nᴅᴍ ᴛᴏ ᴍʏ [ᴏᴡɴᴇʀ](https://t.me/Jankari_Ki_Duniya) ...\n\n━━━━━━━━━━━━━━━━━━━━━━━━",
+        link_preview=False,
+        buttons=(
+            [
+                Button.url(
+                    "☀︎︎️ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☀︎︎",
+                    "https://t.me/Alexa_MentionBot?startgroup=true",
+                ),
+            ],
+            [
+                Button.url("☀︎︎ ɢʀᴏᴜᴘ ☀︎︎︎", "https://t.me/Shayri_Music_Lovers"),
+                Button.url("☀︎︎ ᴄʜᴀɴɴᴇʟ ☀︎︎", "https://t.me/Alexa_BotUpdates"),
+            ],
+            [
+                Button.url("☀︎︎ ʙʀᴏ ☀︎︎️️", "https://t.me/Kattai_massom"),
+                Button.url("☀︎︎ ᴋɪɴɢ ☀︎︎︎", "https://t.me/Jankari_Ki_Duniya"),
+            ],
+        ),
+    )
+
+
+@client.on(events.NewMessage(pattern="^/help$"))
+async def help(event):
+    chat_id = event.chat_id
+    if not event.is_private:
+        return await event.respond("ᴅᴇᴀʀ sᴛᴀʀᴛ ᴍᴇ ɪɴ ᴘᴍ ᴛᴏ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴғ 🥺")
+    helptext = "✪ ʜᴇʟᴘ ᴍᴇɴᴜ ᴏғ ᴀʟᴇxᴀ ᴍᴇɴᴛɪᴏɴ\n\n✪ ᴄᴏᴍᴍᴀɴᴅ: /mentionall\n✪ ᴄᴏᴍᴍᴀɴᴅ: /cancel ᴛᴏ ᴄᴀɴᴄᴇʟ ɢᴏɪɴɢ ᴏɴ ᴘʀᴏᴄᴇss.\n✪ ᴄᴏᴍᴍᴀɴᴅ /admin ᴛᴏ ᴍᴇɴᴛɪᴏɴ ᴀʟʟ ᴀᴅᴍɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ\n✪ Yᴏᴜ ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴡɪᴛʜ ᴛᴇxᴛ ᴡʜᴀᴛ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴍᴇɴᴛɪᴏɴ ᴏᴛʜᴇʀs.\n✪ `Example: /mentionall Good Morning!`\n✪ Yᴏᴜ ᴄᴀɴ ʏᴏᴜ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴀs ᴀ ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏ ᴍᴇssᴀɢᴇ. Bᴏᴛ ᴡɪʟʟ ᴛᴀɢ ᴜsᴇʀs ᴛᴏ ᴛʜᴀᴛ ʀᴇᴘʟɪᴇᴅ ᴍᴇsssᴀɢᴇ."
+    await event.reply(
+        helptext,
+        link_preview=False,
+        buttons=(
+            [
+                Button.url("☀︎︎ ʜᴇᴀʀᴛ", "https://t.me/Give_Me_Heart"),
+                Button.url("ʏᴏᴜᴛᴜʙᴇ ☀︎︎", "https://www.youtube.com/c/JankariKiDuniya"),
+            ]
+        ),
+    )
+
+
+@client.on(events.NewMessage(pattern="^/owner$"))
+async def help(event):
+    chat_id = event.chat_id
+    if not event.is_private:
+        return await event.respond("ᴅᴇᴀʀ sᴛᴀʀᴛ ᴍᴇ ɪɴ ᴘᴍ ᴛᴏ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴғ 🥺")
+    helptext = "✪ ᴏᴡɴᴇʀ ᴍᴇɴᴜ ᴏғ ᴀʟᴇxᴀ ᴍᴇɴᴛɪᴏɴ\n\n✪ ᴍʏ ᴏᴡɴᴇʀ ɪs [ᴀsᴀᴅ ᴀʟɪ](https://t.me/Dr_Asad_Ali)\n✪ ᴏғғɪᴄɪᴀʟ ᴍᴇᴍʙᴇʀ ᴏғ ʀᴏᴄᴋs\n✪ ʏᴏᴜᴛᴜʙᴇ [ᴄʜᴀɴɴᴇʟ](https://www.youtube.com/c/JankariKiDuniya)\n✪ ғᴜᴛᴜʀᴇ ᴀɴᴇsᴛʜᴇᴛɪᴄ."
+    await event.reply(
+        helptext,
+        link_preview=False,
+        buttons=(
+            [
+                Button.url("☀︎︎ ʜᴇᴀʀᴛ", "https://t.me/Give_Me_Heart"),
+                Button.url("ʏᴏᴜᴛᴜʙᴇ ☀︎︎", "https://www.youtube.com/c/JankariKiDuniya"),
+            ]
+        ),
+    )
 
 
 @client.on(events.NewMessage(pattern="^/mentionall ?(.*)"))
@@ -162,11 +224,11 @@ async def cancel_spam(event):
         return await event.respond("sᴛᴏᴘᴘᴇᴅ.")
 
 
-print(">> AGORA WORKING <<")
+print(">> ASAD ALEXA WORKING <<")
 client.run_until_disconnected()
 
 
 # A Powerful Music And Management Bot
 # Property Of Rocks Indian Largest Chatting Group
-# Rocks © @MR_AGORA © Rocks
+# Rocks © @Dr_Asad_Ali © Rocks
 # Owner Asad Ali + Harshit Sharma + Abhimanyu Singh + Krishna Ki Diwani
